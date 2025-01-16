@@ -1,0 +1,26 @@
+<ul>
+  <li><%= @car.brand %></li>
+  <li><%= @car.model %></li>
+  <li><%= @car.year %></li>
+  <li><%= @car.fuel %></li>
+</ul>
+
+<h2>Add a new car</h2>
+<%= simple_form_for [@car, @favourite]  do |f| %>
+  <%= f.submit "Add to your garage" %>
+<% end %>
+
+<hr>
+<h1> New review </h1>
+<%= simple_form_for [@car, @review] do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.submit "Submit" %>
+<% end %>
+
+<h2> Reviews </h2>
+<% @car.reviews.each do |review| %>
+<p><%= review.comment %></p>
+<p> Rating: <%=  review.rating %></p>
+<p>-----------------</p>
+<% end %>
