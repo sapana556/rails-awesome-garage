@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  root "pages#index"
 
   resources :cars, only: [:index, :show] do
     resources :reviews, only: [:create]
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
   end
 
   resources :favourites, only: [:index, :destroy]
+  resources :pages, only: [:index]
 end
