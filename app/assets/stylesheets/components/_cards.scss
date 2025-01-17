@@ -1,0 +1,25 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+
+.card-category {
+  width: 200px;
+  height: 100px;
+  border: 2px, solid, black;
+}
+
+.car-details-comment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-card {
+  border: 1px solid grey;
+  box-shadow: 2px 3px 3px lightgray;
+  width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+
+}
